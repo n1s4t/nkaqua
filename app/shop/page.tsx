@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { supabase } from "@/lib/supabase";
 import ProductGrid from "@/app/components/ProductGrid";
 import { CATEGORIES, CATEGORY_SLUGS } from "@/app/data/categories";
