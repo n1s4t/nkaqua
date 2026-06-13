@@ -1,0 +1,10 @@
+[
+  {
+    "id": "1",
+    "name": "Golden Guppy",
+    "slug": "golden-guppy",
+    "price": 300,
+    "image": "/fish1.jpg",
+    "description": "Bright golden guppy with vibrant tail."
+  }
+]
