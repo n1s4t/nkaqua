@@ -64,7 +64,7 @@ export default function ProductCarousel({ products }: ProductCarouselProps) {
   return (
     <div className="relative">
       <div className="overflow-hidden rounded-3xl glass-card border border-[var(--border)] relative min-h-[420px] md:min-h-[480px]">
-        <AnimatePresence initial={false} custom={direction} mode="wait">
+        <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={product.id}
             custom={direction}
@@ -72,7 +72,7 @@ export default function ProductCarousel({ products }: ProductCarouselProps) {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            transition={{ type: "spring", stiffness: 350, damping: 35, opacity: { duration: 0.25 } }}
             className="absolute inset-0"
           >
             <div className="grid md:grid-cols-2 h-full">
@@ -96,7 +96,7 @@ export default function ProductCarousel({ products }: ProductCarouselProps) {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
                     {product.name}
