@@ -8,6 +8,7 @@ import { CartProvider } from "@/app/context/CartContext";
 import { AuthProvider } from "@/app/context/AuthContext";
 import { ThemeProvider } from "@/app/context/ThemeContext";
 import { Toaster } from "sonner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
@@ -57,6 +58,7 @@ export default function RootLayout({
                   },
                 }}
               />
+              <SpeedInsights />
             </CartProvider>
           </AuthProvider>
         </ThemeProvider>
