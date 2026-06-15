@@ -90,7 +90,7 @@ export default function Header() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="hidden sm:block">
+            <div className="block">
               <span className="text-xl font-bold text-foreground tracking-tight">
                 NK <span className="text-[#38bdf8]">Aqua</span>
               </span>
@@ -287,6 +287,13 @@ export default function Header() {
 
           {/* Mobile */}
           <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={toggle}
+              className="p-2 text-muted hover:text-[#38bdf8] transition rounded-xl hover:bg-[var(--text)]/5"
+              aria-label="Toggle theme"
+            >
+              {resolved === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </button>
             <button onClick={() => setIsOpen(true)} className="relative p-2 text-muted">
               <ShoppingCart className="h-5 w-5" />
               {totalItems > 0 && (
