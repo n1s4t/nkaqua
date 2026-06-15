@@ -21,7 +21,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setMounted(true);
     const saved = localStorage.getItem("nkaqua-theme") as Theme | null;
-    const initial = saved || "dark";
+    const initial = saved || "light";
     setThemeState(initial);
     applyTheme(initial);
   }, []);
